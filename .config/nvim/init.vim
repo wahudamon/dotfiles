@@ -1,6 +1,6 @@
 set clipboard=unnamedplus " Enables the clipboard between Vim/Neovim and other applications.
 set completeopt=noinsert,menuone,noselect " Modifiles the auto-complete menu to behave more like an IDE.
-set cursorline " Highlights the current line in the editor
+" set cursorline " Highlights the current line in the editor
 set hidden " Hide unused buffers
 set autoindent " Indent a new line
 set inccommand=split " Show replacements in a split screen
@@ -23,10 +23,22 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+
+if has('nvim')
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'glepnir/lspsaga.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-lua/telescope.nvim'
+	" Plug 'kyazdani42/nvim-web-devicons'
+endif
+
 call plug#end()
 
+set background=dark
 " colorscheme gruvbox
 let g:bargreybars_auto=0
 let g:airline_solorized_bg='dark'
