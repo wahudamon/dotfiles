@@ -1,1 +1,1 @@
-print('init.lua has been loaded!')
+require('base')
