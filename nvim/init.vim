@@ -38,8 +38,8 @@ endif
 
 call plug#end()
 
+colorscheme gruvbox
 set background=dark
-" colorscheme gruvbox
 let g:bargreybars_auto=0
 let g:airline_solorized_bg='dark'
 let g:airline_powerline_fonts=1
@@ -59,3 +59,4 @@ let g:coc_global_extensions = [
 \ ]
 
 inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
+nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
