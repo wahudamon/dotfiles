@@ -25,17 +25,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 
-if has('nvim')
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'glepnir/lspsaga.nvim'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'nvim-lua/popup.nvim'
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-lua/telescope.nvim'
-	" Plug 'kyazdani42/nvim-web-devicons'
-endif
-
+Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 colorscheme gruvbox
@@ -59,4 +56,4 @@ let g:coc_global_extensions = [
 \ ]
 
 inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
-nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
+nnoremap <silent> <C-B> :NERDTreeToggle<CR>
