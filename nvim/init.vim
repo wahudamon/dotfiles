@@ -16,6 +16,7 @@ filetype plugin indent on " Allow auto-indenting depending on file type syntax o
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -35,7 +36,8 @@ Plug 'nvim-lua/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme tokyonight-night
 set background=dark
 let g:bargreybars_auto=0
 let g:airline_solorized_bg='dark'
@@ -45,15 +47,6 @@ let g:airline#extension#tabline#left_sep=' '
 let g:airline#extension#tabline#left_alt_sep='|'
 let g:airline#extension#tabline#formatter='unique_tail'
 let NERDTreeQuitOnOpen=1
-
-" coc config
-let g:coc_global_extensions = [
-\ 'coc-snippets',
-\ 'coc-pairs',
-\ 'coc-tsserver',
-\ 'coc-prettier', 
-\ 'coc-json',
-\ ]
 
 inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
 nnoremap <silent> <C-B> :NERDTreeToggle<CR>
